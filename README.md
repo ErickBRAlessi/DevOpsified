@@ -25,16 +25,20 @@ Now lets run it mapping our port 1234 to the port 80 in container `docker run -p
 Now we can access it on http://localhost:1234.
 
 If you need to run multiple containers, the easiest way is using docker-compose. So let's create a docker-compose.yml.
-The version says which version o the docker-compose it is written. Services are the applications that will be run. 
+The version says which version o the docker-compose it is written. Services are the applications that will be run.
 
 To run it use the command  `docker-compose -f ./2/docker-compose.yml up`
 
-One can check the containers running: `docker ps` or `docker-compose -f ./2/docker-compose.yml down` 
+One can check the containers running: `docker ps` or `docker-compose -f ./2/docker-compose.yml down`
 
 Or to stop them and remove the network `docker-compose -f ./2/docker-compose.yml down`
 
 *if you are in the folder of the docker-compose, you do not need to specify the path every time*
 
+## 3. Testing your app with RSpec, Capybara, and Selenium
+
+RSpec is a Ruby-based testing framework, it has its own domain-specific language (dsl). We are going to use Capybara to
+spin up the website and as a webdriver we are going to use Selenium, which is what runs test against the website. 
 
 
 
